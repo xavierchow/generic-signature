@@ -7,6 +7,10 @@
     "pretest": "eslint index.js test/",
     "test": "mocha test/*"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xavierchow/generic-signature.git"
+  },
   "author": "xavierchow",
   "license": "MIT",
   "bugs": {
