@@ -1,0 +1,24 @@
+{
+  "name": "generic-signature",
+  "version": "1.0.0",
+  "description": "A library building signature",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "eslint index.js test/",
+    "test": "mocha test/*"
+  },
+  "author": "xavierchow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xavierchow/generic-signature/issues"
+  },
+  "homepage": "https://github.com/xavierchow/generic-signature#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.3.0",
+    "mocha": "^3.0.2"
+  },
+  "dependencies": {
+    "debug": "^2.2.0"
+  }
+}
