@@ -11,7 +11,7 @@ module.exports = function(param, options) {
     .map(key => `${options.forceLowerCase ? key.toLowerCase() : key}=${param[key]}`)
     .sort()
     .join('&');
-  const signTemp = `${stringA}&key=${options.key}`;
+  const signTemp = `${stringA}${options.key}`;
   debug(signTemp);
 
   const algorithm = options.algorithm || 'md5';

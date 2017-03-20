@@ -14,7 +14,7 @@ describe('signature', () => {
       body: 'test',
       'nonce_str': 'ibuaiVcKdpRxkhJA'
     };
-    const opt = { key: '192006250b4c09247ec02edce69f6a2d' };
+    const opt = { key: '&key=192006250b4c09247ec02edce69f6a2d' };
     expect(sign(source, opt)).to.be.equal(expected);
   });
 
@@ -28,7 +28,7 @@ describe('signature', () => {
       'nonce_str': 'ibuaiVcKdpRxkhJA',
       foo: null
     };
-    const opt = { key: '192006250b4c09247ec02edce69f6a2d' };
+    const opt = { key: '&key=192006250b4c09247ec02edce69f6a2d' };
     expect(sign(source, opt)).to.be.equal(expected);
   });
 
@@ -42,7 +42,7 @@ describe('signature', () => {
       'nonce_str': 'ibuaiVcKdpRxkhJA',
       foo: undefined
     };
-    const opt = { key: '192006250b4c09247ec02edce69f6a2d' };
+    const opt = { key: '&key=192006250b4c09247ec02edce69f6a2d' };
     expect(sign(source, opt)).to.be.equal(expected);
   });
 
@@ -56,7 +56,7 @@ describe('signature', () => {
       'nonce_str': 'ibuaiVcKdpRxkhJA',
       foo: 0
     };
-    const opt = { key: '192006250b4c09247ec02edce69f6a2d' };
+    const opt = { key: '&key=192006250b4c09247ec02edce69f6a2d' };
     expect(sign(source, opt)).to.be.not.equal(expected);
   });
 
@@ -70,7 +70,7 @@ describe('signature', () => {
       'nonce_str': 'ibuaiVcKdpRxkhJA',
       foo: {}
     };
-    const opt = { key: '192006250b4c09247ec02edce69f6a2d' };
+    const opt = { key: '&key=192006250b4c09247ec02edce69f6a2d' };
     expect(sign(source, opt)).to.be.equal(expected);
   });
 
@@ -85,7 +85,7 @@ describe('signature', () => {
       bar: 'baz'
     };
     const opt = {
-      key: '192006250b4c09247ec02edce69f6a2d',
+      key: '&key=192006250b4c09247ec02edce69f6a2d',
       excludedProp: 'bar'
     };
     expect(sign(source, opt)).to.be.equal(expected);
@@ -102,7 +102,7 @@ describe('signature', () => {
       BAR: 'baz'
     };
     const opt = {
-      key: '192006250b4c09247ec02edce69f6a2d',
+      key: '&key=192006250b4c09247ec02edce69f6a2d',
       excludedProp: 'bar',
       forceLowerCase: true
     };
@@ -120,7 +120,7 @@ describe('signature', () => {
       BAR: 'baz'
     };
     const opt = {
-      key: '192006250b4c09247ec02edce69f6a2d',
+      key: '&key=192006250b4c09247ec02edce69f6a2d',
       excludedProp: 'bar',
       forceLowerCase: true,
       resultToUpperCase: true
